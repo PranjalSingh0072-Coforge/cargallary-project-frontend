@@ -1,0 +1,33 @@
+<div class="mt-2 p-2 bg-success text-white rounded">
+  <h4>Car Specs Hub: Your Ultimate Guide to Car Specifications </h4>
+
+
+</div>
+<div class="container mt-4">
+  <h2 class="text-center text-primary">Showroom Details</h2>
+  <div *ngFor="let showroom of showrooms" class="card mb-4">
+    <div class="card-header bg-dark text-white">
+      <h3>{{ showroom.name }}</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Location</h5>
+          <p>{{ showroom.address }}</p>
+          <h5>Owner</h5>
+          <p>{{ showroom.owner }}</p>
+          <h5>Contact Details</h5>
+          <p>Phone: {{ showroom.contact.phone }}</p>
+          <p>Email: {{ showroom.contact.email }}</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Showroom Photos</h5>
+          <img *ngFor="let photo of showroom.photos" [src]="photo" class="img-fluid mb-2" alt="Showroom Photo">
+        </div>
+        
+        <button type="button" class="btn btn-primary"> <b>Enquiry-Now</b></button>
+        
+      </div>
+    </div>
+  </div>
+</div>

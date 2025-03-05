@@ -1,0 +1,238 @@
+<div class="mt-2 p-2 bg-success text-white rounded">
+    <h4>Car Specs Hub: Your Ultimate Guide to Car Specifications </h4>
+
+
+</div>
+
+
+<div class="row">
+
+    <br> <br><br><br><br>
+
+    <div class="row pt-2">
+        <div class="col-20">
+            <!-- this is button for Modals -->
+            <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add New Car details
+            </button> -->
+
+            <!-- This is a Modals  -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Car Modals</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" data-bs-target="#CarModal">
+
+                            <!-- Add New Form Fetched With Forms -->
+                            <div class="card-body" (ngSubmit)="onSave()">
+                                <div class="row">
+                                    <!-- <div class="col-12">
+                                        <label for="productName" class="form-label"><b>Car Id</b></label>
+                                        <input type="text" class="form-control " id="productName" [(ngModel)]="deptObj.id"  id="id" class="form-control">
+                                    </div> -->
+
+                                    <!-- For Testing formet -->
+                                    <!-- <div class="col-12">
+                                        <label for="productName" class="form-label">Car Name</label>
+                                        <input type="text" class="form-control" id="productName" [(ngModel)]="deptObj.name" name="name">
+                                      </div> -->
+
+
+                                    <div class="col-12">
+                                        <label for="productName" class="form-label"><b>Car Name</b></label>
+                                        <input type="text" class="form-control" id="productName"
+                                            [(ngModel)]="deptObj.name" name="name" class="form-control"
+                                            placeholder="Enter Car Name">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for=""><b>Car Price</b></label>
+                                        <input type="text" [(ngModel)]="deptObj.price" class="form-control"
+                                            placeholder="Enter Car Price">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for=""><b>Quantity</b></label>
+                                        <input type="number" [(ngModel)]="deptObj.quantity" class="form-control" 
+                                        placeholder="Enter Quantity" min="0">
+                                    </div>
+
+                                    <!-- <div class="col-12">
+                                        <label for="carImageUpload">Upload Car Image</label>
+                                        <input type="file" id="carImageUpload" class="form-control">
+                                    </div> -->
+
+                                    <!-- <div class="col-12">
+                                        <label for=""><b> Car ImageUrl</b></label>
+                                        <input type="text" [(ngModel)]="deptObj.imageUrl" class="form-control"
+                                            placeholder="Enter  Car ImageUrl">
+                                    </div> -->
+
+                                    <div class="col-12">
+                                        <label for="carImageUpload"><b>Car ImageData</b></label>
+                                        <input type="file" id="carImageUpload" [(ngModel)]="deptObj.imageData"
+                                            class="form-control" placeholder="Enter Car ImageData">
+
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <label for="carImageUpload"><b>Car ImageData</b></label>
+                                        <input type="file" id="carImageUpload" (change)="onFileSelected($event)" class="form-control" placeholder="Enter Car ImageData">
+                                        <img *ngIf="imageSrc" [src]="imageSrc" alt="Car Image" class="img-fluid mt-2">
+                                      </div>
+                                       -->
+                                    <div class="col-12">
+                                        <label for=""><b>Car Specification</b></label>
+                                        <input type="text" [(ngModel)]="deptObj.specification" class="form-control"
+                                            placeholder="Enter Car Specification">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for=""><b>Car Manufacture Date</b></label>
+
+
+
+                                        <input type="datetime-local" id="Test_DatetimeLocal" min="2015-01-01T00:00"
+                                            max="2025-12-31T23:59" step="1" class="form-control"
+                                            [(ngModel)]="deptObj.createDate" class="form-control"
+                                            placeholder="Enter Car Manufacturing Date">
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+
+
+                                <!-- <div class="col-12">
+                                        <label for="">Car imageFile</label>
+                                        <input type="text" [(ngModel)]="deptObj.CarImageFile" class="form-control" placeholder="Enter Car imageFile">
+                                    </div> -->
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-6 text-center">
+                                    <button class="btn btn-success" (click)="onSave()">Save</button>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <!-- {{deptObj| json}} -->
+                                    @if(deptObj.id == 0){
+                                    <button class="btn btn-success" (click)="onSave()">Save</button>
+                                    }@else {
+
+                                    <button class="btn btn-warning" (click)="onUpdate()">Update</button>
+
+
+                                    }
+
+
+
+
+                                </div>
+
+                                <div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- This is new form for tesing -->
+
+
+
+
+            <div class="card">
+                <div class="col-20 text-end text-white">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <b>Add New Car <sup><b>+</b></sup></b>
+                    </button>
+                    <button type="button" class="btn btn-info ms-3" (click)="onDownload()">Download File</button>
+                    <span class="ms-3"><a href="" class="btn btn-danger text-right"><b>Back</b></a></span>
+                </div>
+
+                <div class="card-header bg-secondary text-white">
+                    <span> <b>Car List</b></span>
+                    <!-- This is for testing -->
+
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form (ngSubmit)="onUpdate()">
+                                    <!-- Add form fields here -->
+                                    <div class="mb-3">
+                                        <label for="productName" class="form-label">Product Name</label>
+                                        <input type="text" class="form-control" id="productName"
+                                            [(ngModel)]="deptObj.name" name="name">
+                                    </div>
+                                    <!-- Add other fields as needed -->
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                   
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body" id="CarModal">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>ImageUrl</th>
+                                        <th>Specification</th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (result of CarList; track $index) {
+                                    <tr>
+                                        <td>{{$index+1}}</td>
+                                        <td>{{result.name}}</td>
+                                        <td>{{result.price}}</td>
+                                        <td>
+                                            <img src="{{result.imageUrl}}" alt="Product Image" style="width: 100px; height: auto;" />
+                                        </td>
+                                        <td>{{result.specifications}}</td>
+                                        <td>{{result.quantity}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success ms-3" (click)="onEdit(result.id)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <b>Edit <sup><b>+</b></sup></b>
+                                            </button>
+                                            <span class="ms-3">
+                                                <button class="btn btn-danger" (click)="onDelete(result.id)"><b>Delete</b></button>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

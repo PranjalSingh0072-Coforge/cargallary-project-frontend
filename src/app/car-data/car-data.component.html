@@ -1,0 +1,38 @@
+<div class="mt-2 p-2 bg-success text-white rounded">
+  <h4>Car Specs Hub: Your Ultimate Guide to Car Specifications </h4>
+
+
+</div>
+<div class="container mt-4">
+    <h2 class="text-center text-primary">Car Data Table</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Id</th>
+          <th>Car Name</th>
+          <th>Price</th>
+          <th>Color</th>
+          <th>Features</th>
+          <th>Booking Date</th>
+          <th>Delivery Date</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td>{{ car.id }}</td>
+          <td>{{ car.name }}</td>
+          <td>{{ car.price }}</td>
+          <td>{{ car.color }}</td>
+          <td>{{ car.features }}</td>
+          <td>{{ car.bookingDate }}</td>
+          <td>{{ car.deliveryDate }}</td>
+          <td>{{ car.quantity }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="downloadOrderSlip(car)">Download Inovice</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,135 @@
+.accessory-container {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .a-price {
+    font-size: 1.5em;
+    color: #b12704;
+  }
+  
+  .a-size-base-plus {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .a-icon-star-small {
+    color: #ffa41c;
+  }
+  
+  /* .a-button-primary {
+    background-color: #ffec1b;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .a-button-primary:hover {
+    background-color: #ebe704;
+  } */
+  
+  .a-icon-cart {
+    margin-right: 5px;
+  }
+  
+  .s-align-children-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .s-icon-text-medium {
+    font-size: 1em;
+  }
+  
+  .s-prime {
+    margin-right: 5px;
+  }
+  
+  .s-underline-text {
+    text-decoration: underline;
+  }
+  
+  .s-underline-link-text {
+    text-decoration: underline;
+    color: #007185;
+  }
+  
+  .s-link-style {
+    color: #007185;
+  }
+  
+  .s-link-style:hover {
+    color: #c7511f;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.product {
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.product p {
+    margin: 5px 0;
+}
+.product .rating {
+    color: #f39c12;
+           font-size: 1.5em;
+    color: #e74c3c;
+}
+.product .delivery-date {
+    color: #2ecc71;
+}
+.product button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+}
+.buy-now {
+    background-color: #e74c3c;
+    color: white;
+}
+.price {
+    font-size: 1.2em;
+}
+.price .mrp {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+.price .discount {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-left: 10px;
+}
+  
+  
+ 
