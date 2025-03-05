@@ -23,7 +23,7 @@ jobs:
 
     - name: Run tests
       run: |
-        npm install karma-chrome-launcher --save-dev
+        npm install karma-chrome-launcher karma-jasmine karma-jasmine-html-reporter --save-dev
         npx karma start --browsers ChromeHeadless
 
     - name: Build project
