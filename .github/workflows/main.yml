@@ -1,0 +1,34 @@
+name: cargallary-project-frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.19'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: |
+        npm install karma-chrome-launcher karma-jasmine karma-jasmine-html-reporter --save-dev
+        npx karma start --browsers ChromeHeadless
+
+    - name: Build project
+      run: npm run build
+
+    - name: Success message 
+      if: success()
+      run: echo "Build and tests were successful!"
