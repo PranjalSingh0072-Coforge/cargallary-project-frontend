@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  
 
 jobs:
   build:
@@ -23,11 +22,13 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test
+      run: |
+        npm install karma-chrome-launcher --save-dev
+        npx karma start --browsers ChromeHeadless
 
     - name: Build project
       run: npm run build
 
-    - name: Success message
+    - name: Success message 
       if: success()
       run: echo "Build and tests were successful!"
