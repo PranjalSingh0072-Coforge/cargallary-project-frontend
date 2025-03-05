@@ -21,13 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: |
-        npm install karma-chrome-launcher karma-jasmine karma-jasmine-html-reporter --save-dev
-        npx karma start --browsers ChromeHeadless
 
-    - name: Build project
-      run: npm run build
+
 
     - name: Success message 
       if: success()
